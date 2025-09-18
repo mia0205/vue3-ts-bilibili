@@ -1,13 +1,19 @@
 <template>
   <div class="main">
     <van-tabs v-model:active="active">
-      <van-tab v-for="index in 8" :title="'标签 ' + index" :key="index">
-        内容
-      </van-tab>
-   </van-tabs>
+      <van-tab title="标签 1">内容 1</van-tab>
+      <van-tab title="标签 2">内容 2</van-tab>
+      <van-tab title="标签 3">内容 3</van-tab>
+      <van-tab title="标签 4">内容 4</van-tab>
+    </van-tabs>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const active = ref(0)
+
+</script>
 
 <style lang="less" scoped></style>
