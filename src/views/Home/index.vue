@@ -1,11 +1,15 @@
 <template>
   <AppHeader />
-  <TabIndex></TabIndex>
+  <TabIndex>
+
+  </TabIndex>
+  <SwipeIndex></SwipeIndex>
 </template>
 
 <script setup>
 import AppHeader from '@/components/AppHeader.vue'
 import TabIndex from './components/TabIndex.vue'
+import SwipeIndex from './components/SwipeIndex.vue'
 
 </script>
 
