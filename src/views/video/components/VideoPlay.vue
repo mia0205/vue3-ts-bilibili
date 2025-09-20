@@ -44,6 +44,7 @@ defineProps({
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  margin-bottom: 0px;
 
   .video{
     box-sizing: border-box;

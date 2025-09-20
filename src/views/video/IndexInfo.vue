@@ -3,7 +3,10 @@
   <videoplay
   :videoValue="videoDetail"
   ></videoplay>
-  <VideoInfo></VideoInfo>
+  <VideoInfo
+  :videoinfolist="videoDetail"
+
+  ></VideoInfo>
 </template>
 
 <script setup lang="ts">
