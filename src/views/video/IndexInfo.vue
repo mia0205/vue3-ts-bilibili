@@ -7,12 +7,16 @@
   :videoinfolist="videoDetail"
 
   ></VideoInfo>
+  <VideoBottom></VideoBottom>
+  <VideoComment></VideoComment>
 </template>
 
 <script setup lang="ts">
 import AppHeader from '@/components/AppHeader.vue'
 import videoplay from './components/VideoPlay.vue'
 import VideoInfo from './components/VideoInfo.vue'
+import VideoBottom from './components/VideoBottom.vue'
+import VideoComment from './components/VideoComment.vue'
 import { useRoute } from 'vue-router'
 
 import { ref } from 'vue'
