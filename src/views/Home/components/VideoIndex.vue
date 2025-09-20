@@ -1,7 +1,9 @@
 <template>
   <div class="list">
     <VideoItemi
-      v-for="(item,index) in videoList" :key="index"
+      v-for="item in videoList" :key="item.imgSrc"
+      :videoValue="item"
+      v-lazy="item"
 
     />
   </div>
@@ -18,6 +20,9 @@ interface VideoItem{
   imgSrc:string
   link:string
   desc:string
+  playCount:string
+  videoSrc:string
+  commentCount:string
 }
 
 // 定义video数据

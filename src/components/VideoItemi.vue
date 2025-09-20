@@ -1,26 +1,47 @@
 <template>
-  <router-link to="`/video/${video.id}`" class="card">
+  <router-link :to="`/video/${videoValue?.id}`" class="card">
     <div class="main">
       <div class="card-img">
-        <img src="" alt="" class="pic">
+        <img :src="videoValue?.imgSrc" alt="" class="pic">
       </div>
       <div class="count">
         <span>
           <van-icon name="video-o" />
-          24.9万
+          {{ videoValue?.playCount }}
         </span>
         <span>
           <van-icon name="coupon-o" />
-          1345
+          {{ videoValue?.commentCount }}
         </span>
       </div>
 
     </div>
-    <p class="title">123</p>
+    <p class="title">{{ videoValue?.desc }}</p>
   </router-link>
 </template>
 
 <script setup lang="ts">
+import { defineProps, PropType } from 'vue'
+
+// 定义接口
+interface videoType {
+  id:string
+  imgSrc:string
+  link:string
+  desc:string
+  playCount:string
+  videoSrc:string
+  commentCount:string
+}
+
+// 父传子
+defineProps({
+  videoValue: {
+    type: Object as PropType<videoType>,
+    require: true
+  }
+
+})
 </script>
 
 <style lang="less" scoped>
