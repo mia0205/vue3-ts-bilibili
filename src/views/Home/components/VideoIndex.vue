@@ -3,7 +3,6 @@
     <VideoItemi
       v-for="item in videoList" :key="item.imgSrc"
       :videoValue="item"
-      v-lazy="item"
 
     />
   </div>
