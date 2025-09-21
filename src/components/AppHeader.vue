@@ -9,7 +9,7 @@
       <van-icon name="search" />
     </div>
     <div class="log">
-      <span>登录</span>
+      <span @click="loginFn">登录</span>
 
     </div>
     <van-button color="pink">下载App</van-button>
@@ -18,7 +18,13 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+// import { createRouter } from 'vue-router'
+// const router = createRouter()
+// const loginFn = () => {
+//   // router.push('/login')
+// }
+</script>
 
 <style lang="less" scoped>
 .main{
