@@ -3,7 +3,7 @@
   <van-tab title="推荐">
     <VideoRecommented></VideoRecommented>
   </van-tab>
-  <van-tab title="评论">内容 2</van-tab>
+  <van-tab title="评论"></van-tab>
 
 </van-tabs>
 </template>

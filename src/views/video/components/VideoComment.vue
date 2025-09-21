@@ -1,15 +1,15 @@
 <template>
-  <div class="recomment">
+  <div class="recomment" v-for="item in commentArr" :key="item.id">
     <div class="left">
-      <img src="" alt="" class="img">
+      <img :src="item.avatar" alt="" class="img">
     </div>
     <div class="right">
       <div class="title">
-        <p>name</p>
-        <p>date</p>
+        <p>{{ item.username }}</p>
+        <p>{{ item.date }}</p>
       </div>
       <div class="content">
-        qwieoperhf
+        {{ item.content }}
       </div>
     </div>
     <p></p>
@@ -53,7 +53,6 @@ axios({
 .recomment{
   width: 100%;
   height: 100px;
-  background-color: pink;
   display: flex;
   .left{
     width: 20%;
@@ -61,12 +60,26 @@ axios({
       width: 30px;
       height: 30px;
       border-radius: 50%;
+      margin-left:15px;
     }
   }
   .right{
     width: 80%;
     display: flex;
     flex-direction: column;
+    .title{
+      margin-top:6px;
+      p{
+        margin-top:0px;
+        margin-bottom: 0px;
+        padding: 0 0;
+        font-size: 13px;
+      }
+    }
+    .content{
+      margin-top:10px;
+      font-size:13px;
+    }
 
   }
 
